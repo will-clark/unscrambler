@@ -5,5 +5,12 @@
     </head>
     <body>
         <p>Hello <span th:text="${name}">World</span></p>
+        <table>
+        <tr th:each="word : ${words}">
+            <td th:text="${word.value}">baseball</td>
+            <td th:text="${word.chars}">abels</td>
+            <td th:text="${word.length}">8</td>
+        </tr>
+        </table>
     </body>
 </html>
