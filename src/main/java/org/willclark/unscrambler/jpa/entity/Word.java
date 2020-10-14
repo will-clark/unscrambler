@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 import java.util.TreeSet;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,18 +20,19 @@ import lombok.ToString;
 @Table(name = "WORD")
 @ToString
 @EqualsAndHashCode
-public class WordEntity implements BaseEntity, Serializable {
+public class Word implements BaseEntity, Serializable {
     
     private static final long serialVersionUID = 1L;
 
-    public WordEntity(@NonNull String value) {
+    public Word(@NonNull String value) {
         setValue(value);
     }
 
-    protected WordEntity() {}
+    protected Word() {}
 
     @Id
     @Getter
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Getter
