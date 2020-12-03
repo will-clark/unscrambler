@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-import org.willclark.unscrambler.jpa.entity.Word;
+import org.willclark.unscrambler.Word;
 
 public class ConvertTextFileToCSV {
     

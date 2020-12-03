@@ -16,7 +16,7 @@ public class HomeController {
     @Autowired
     private WordRepository wordRepository;
 
-    @RequestMapping(value="/", method = RequestMethod.GET)
+    @RequestMapping(path="/", method = RequestMethod.GET)
     public String showHomePage(ModelMap model, @RequestParam("name") Optional<String> name){
         model.put("name", name.orElse("World"));
         model.put("words", wordRepository.findAll());
